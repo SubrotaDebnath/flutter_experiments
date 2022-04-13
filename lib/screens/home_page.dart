@@ -13,7 +13,8 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Navigator.of(context).pushNamed(Routes.kSecondScreen,arguments: 'Second Screen Title');
+            Navigator.of(context).pushNamed(Routes.kSecondScreen,
+                arguments: 'Second Screen Title');
           },
           child: const Text('Go to Second Screen'),
         ),
