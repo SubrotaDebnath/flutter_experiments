@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Experiments Home Page'),
+      home: const MyHomePage(title: 'Flutter Bluetooth'),
     );
   }
 }
