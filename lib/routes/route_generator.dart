@@ -13,9 +13,24 @@ class RouteGenerator {
       case Routes.kRootScreen:
         return MaterialPageRoute(builder: (_) => const HomePage());
       case Routes.kSecondScreen:
-        return MaterialPageRoute(builder: (_) => const SecondScreen());
+        if (args is String) {
+          return MaterialPageRoute(
+            builder: (_) => SecondScreen(
+              tittle: args,
+            ),
+          );
+        }
+        return MaterialPageRoute(builder: (_) => const ErrorScreen());
+
       case Routes.kThirdScreen:
-        return MaterialPageRoute(builder: (_) => const ThirdScreen());
+        if (args is String) {
+          return MaterialPageRoute(
+            builder: (_) => ThirdScreen(
+              tittle: args,
+            ),
+          );
+        }
+        return MaterialPageRoute(builder: (_) => const ErrorScreen());
       default:
         return MaterialPageRoute(builder: (_) => const ErrorScreen());
     }

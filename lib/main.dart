@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_experiments/routes/route_generator.dart';
-import 'package:flutter_experiments/screens/home_page.dart';
+import 'package:flutter_experiments/routes/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/',
+      initialRoute: Routes.kRootScreen,
       onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
