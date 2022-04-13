@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_experiments/routes/routes.dart';
 
 class HomePage extends StatelessWidget {
-  final String title;
-
-  const HomePage({required this.title, Key? key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: const Text('Home Screen'),
       ),
       body: Center(
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).pushNamed(Routes.kSecondScreen);
+          },
           child: const Text('Go to Second Screen'),
         ),
       ),
