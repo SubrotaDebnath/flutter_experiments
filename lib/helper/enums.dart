@@ -1,0 +1,1 @@
+enum DeviceMood{landscapeMobile,landscapeTablet,portraitMobile,portraitTablet}
